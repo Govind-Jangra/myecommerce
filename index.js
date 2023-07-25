@@ -74,7 +74,7 @@ opts.secretOrKey = process.env.JWT_SECRET_KEY;
 
 //middlewares
 
-server.use(express.static(path.resolve(__dirname, '../frontend/build')));
+server.use(express.static(path.resolve(__dirname, 'build')));
 server.use(cookieParser());
 server.use(
   session({
@@ -102,7 +102,7 @@ server.use('/cart', isAuth(), cartRouter.router);
 server.use('/orders', isAuth(), ordersRouter.router);
 
 server.get('*', (req, res) =>
-  res.sendFile(path.resolve('../frontend/build', 'index.html'))
+  res.sendFile(path.resolve('build', 'index.html'))
 );
 
 
