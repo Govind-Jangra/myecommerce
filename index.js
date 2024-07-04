@@ -209,5 +209,5 @@ async function main() {
 }
 
 server.listen(process.env.PORT, () => {
-  console.log('server started');
+  console.log(`Server is running at http://localhost:${process.env.PORT}`);
 });
