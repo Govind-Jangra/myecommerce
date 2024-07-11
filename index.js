@@ -74,7 +74,7 @@ opts.secretOrKey = process.env.JWT_SECRET_KEY;
 
 //middlewares
 
-server.use(express.static(path.resolve(__dirname, 'build')));
+server.use(express.static(path.resolve(__dirname, 'frontend/build')));
 server.use(cookieParser());
 server.use(
   session({
